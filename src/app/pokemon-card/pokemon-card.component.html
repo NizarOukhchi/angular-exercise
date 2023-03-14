@@ -1,0 +1,19 @@
+<div class="col-span-1 flex flex-col text-center shadow rounded-md p-4 h-full">
+    <img class="mx-auto h-32 w-32" [src]="pokemon?.image">
+    <h3 class="text-sm text-gray-900 mt-2">
+        <app-editable-element [value]="pokemon?.name || ''" (valueChange)="onNameChange($event)"></app-editable-element>
+    </h3>
+    <p class="text-sm text-gray-500 mt-2">{{pokemon?.lastSeen | date: 'shortDate'}}</p>
+    <div class="flex gap-6 mx-auto">
+        <div class="text-green-900">Attack: 
+            <app-editable-element [value]="pokemon?.attack || ''" (valueChange)="onAttackChange($event)"></app-editable-element>
+        </div>
+        <div class="text-red-900">Defense: 
+            <app-editable-element [value]="pokemon?.defense || ''" (valueChange)="onDefenseChange($event)"></app-editable-element>
+        </div>
+    </div>
+    <div class="flex gap-2 items-center mx-auto mt-2">
+        <img *ngFor="let type of pokemon?.types" class="h-6 w-6" [src]="type?.image">
+    </div>
+    <button class="mt-2 disabled:cursor-not-allowed" (click)="onCapture()" [ngClass]="{'text-red-600': pokemon?.captured }">{{pokemon?.captured ? 'Release': 'Capture'}}</button>
+</div>

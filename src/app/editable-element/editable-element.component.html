@@ -1,0 +1,7 @@
+<ng-container>
+    <span *ngIf="!showInput">{{value}}</span>
+    <input *ngIf="showInput" class="text-xs ml-2 text-gray-500 border shadow-sm" type="text"
+        [(ngModel)]="value">
+    <button *ngIf="!showInput" class="text-xs ml-2 text-gray-500" (click)="showInput = true">edit</button>
+    <button *ngIf="showInput" class="text-xs ml-2 text-gray-500" (click)="onEdit()">save</button>
+</ng-container>
