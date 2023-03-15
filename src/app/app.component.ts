@@ -1,25 +1,36 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 
-import { data } from '../data';
 import { Pokemon } from './pokemon.model';
+import { PokemonService } from './pokemon.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit, OnDestroy {
-  pokemons: Pokemon[] = data;
-  value = 0;
+  pokemons: Pokemon[] = [];
+  isDeleteLoading: any[] = [];
+  searchQuery = '';
+  searchQuerySubject = new Subject<string>();
+
+  constructor(private pokemonService: PokemonService) {
+    this.searchQuerySubject
+      .pipe(debounceTime(500), distinctUntilChanged())
+      .subscribe((query: string) => {
+        this.search(query);
+      });
+  }
 
   ngOnInit(): void {
-    console.log('component ready');
+    this.pokemonService.getPokemons().subscribe((pokemons) => {
+      this.pokemons = pokemons;
+      this.isDeleteLoading = pokemons.map((p) => ({
+        id: p.id,
+        isLoading: false,
+      }));
+    });
   }
 
   ngOnDestroy(): void {
@@ -27,19 +38,58 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   capture(pokemon: Pokemon) {
-    this.pokemons = this.pokemons.map((p) => {
-      if (p.id === pokemon.id) {
-        return { ...p, captured: !p.captured };
-      }
-      return p;
-    });
-    console.log(`${pokemon.name} captured!`);
+    this.pokemonService
+      .updatePokemon({ ...pokemon, captured: !pokemon.captured })
+      .subscribe((updatedPokemon) => {
+        this.pokemons = this.pokemons.map((p) => {
+          if (p.id === updatedPokemon.id) {
+            return updatedPokemon;
+          }
+          return p;
+        });
+      });
   }
 
   changeValue(event: any) {
-    this.pokemons = this.pokemons.map((p) => {
-      if (p.id === event.id) {
-        return { ...p, [event.key]: event.value };
+    const { value, key, pokemon } = event;
+    this.pokemonService
+      .updatePokemon({ ...pokemon, [key]: value })
+      .subscribe((updatedPokemon) => {
+        this.pokemons = this.pokemons.map((p) => {
+          if (p.id === updatedPokemon.id) {
+            return updatedPokemon;
+          }
+          return p;
+        });
+      });
+  }
+
+  delete(pokemon: Pokemon) {
+    this.setIsLoading(pokemon, true);
+    this.pokemonService.deletePokemon(pokemon).subscribe(() => {
+      this.pokemons = this.pokemons.filter((p) => p.id !== pokemon.id);
+      this.setIsLoading(pokemon, false);
+    });
+  }
+
+  getIsDeleteLoading(pokemon: Pokemon) {
+    return this.isDeleteLoading.find((p) => p.id === pokemon.id)?.isLoading;
+  }
+
+  search(query: string) {
+    this.pokemonService.search(query).subscribe((pokemons) => {
+      this.pokemons = pokemons;
+    });
+  }
+
+  onQuery(event: any) {
+    this.searchQuerySubject.next(event.target.value);
+  }
+
+  private setIsLoading(pokemon: Pokemon, isLoading: boolean) {
+    this.isDeleteLoading = this.isDeleteLoading.map((p) => {
+      if (p.id === pokemon.id) {
+        return { ...p, isLoading };
       }
       return p;
     });

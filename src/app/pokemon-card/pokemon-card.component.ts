@@ -8,22 +8,29 @@ import { Pokemon } from '../pokemon.model';
 })
 export class PokemonCardComponent {
   @Input() pokemon?: Pokemon;
+  @Input() isDeleteLoading = false;
+
   @Output() capture = new EventEmitter<Pokemon>();
   @Output() changeValue = new EventEmitter<any>();
+  @Output() delete = new EventEmitter<Pokemon>();
 
   onCapture() {
     this.capture.emit(this.pokemon);
   }
 
   onNameChange(name: any) {
-    this.changeValue.emit({ value: name, key: 'name', id: this.pokemon?.id });
+    this.changeValue.emit({ value: name, key: 'name', pokemon: this.pokemon });
   }
 
   onAttackChange(value: any) {
-    this.changeValue.emit({ value, key: 'attack', id: this.pokemon?.id });
+    this.changeValue.emit({ value, key: 'attack', pokemon: this.pokemon });
   }
 
   onDefenseChange(value: any) {
-    this.changeValue.emit({ value, key: 'defense', id: this.pokemon?.id });
+    this.changeValue.emit({ value, key: 'defense', pokemon: this.pokemon });
+  }
+
+  onDelete() {
+    this.delete.emit(this.pokemon);
   }
 }

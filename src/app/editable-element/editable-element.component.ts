@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./editable-element.component.css'],
 })
 export class EditableElementComponent {
-  @Input() value: string | number = '';
+  @Input() value?: string | number = '';
   @Output() valueChange = new EventEmitter<string | number>();
 
   showInput = false;

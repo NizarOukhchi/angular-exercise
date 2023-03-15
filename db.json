@@ -1,0 +1,250 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "nizar",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      "attack": 49,
+      "defense": 49,
+      "hasEvolution": true,
+      "types": [
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        },
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        }
+      ],
+      "description": "Bulbizarre peut être vu en train de faire la sieste sous le soleil. Il y a une graine sur son dos. En absorbant les rayons du soleil, la graine grandit progressivement."
+    },
+    {
+      "id": 2,
+      "name": "Herbizarre",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+      "attack": 62,
+      "defense": 63,
+      "hasEvolution": true,
+      "types": [
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        },
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        }
+      ],
+      "description": "Herbizarre a une graine sur son dos. La graine est en train de pousser. Il absorbe les rayons du soleil pour faire pousser la graine."
+    },
+    {
+      "id": 3,
+      "name": "Florizarre",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+      "attack": 82,
+      "defense": 83,
+      "hasEvolution": false,
+      "types": [
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        },
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        }
+      ],
+      "description": "Sa plante donne une grosse fleur quand elle absorbe les rayons du soleil. Il est toujours à la recherche des endroits les plus ensoleillés. Ses pattes se sont renforcées pour supporter le poids de sa fleur dorsale."
+    },
+    {
+      "id": 4,
+      "name": "nizar",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      "attack": 52,
+      "defense": 43,
+      "hasEvolution": true,
+      "types": [
+        {
+          "name": "Feu",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png"
+        }
+      ],
+      "description": "Salameche a un bout de queue qui brûle. Il le balance pour faire fuir ses ennemis. Il peut aussi le tenir pour se réchauffer."
+    },
+    {
+      "id": 5,
+      "name": "Reptincel",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+      "attack": 64,
+      "defense": 58,
+      "hasEvolution": true,
+      "types": [
+        {
+          "name": "Feu",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png"
+        }
+      ],
+      "description": "Il est très brutal. En combat, il se sert de ses griffes acérées et de sa queue enflammée pour mettre en pièces ses adversaires."
+    },
+    {
+      "id": 6,
+      "name": "Dracaufeu",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+      "attack": 84,
+      "defense": 78,
+      "hasEvolution": false,
+      "types": [
+        {
+          "name": "Vol",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/7/7f/Flying.png"
+        },
+        {
+          "name": "Feu",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png"
+        }
+      ],
+      "description": "Dracaufeu crache du feu à des températures très élevées. Son souffle brûlant peut faire fondre la roche. Il est parfois la cause d'incendies de forêt. ."
+    },
+    {
+      "id": 7,
+      "name": "Carapuce",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      "attack": 48,
+      "defense": 65,
+      "hasEvolution": true,
+      "types": [
+        {
+          "name": "Eau",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png"
+        }
+      ],
+      "description": "Carapuce a une carapace dure comme du fer. Il peut se replier sur elle pour se protéger. Il peut aussi l'utiliser comme bouclier."
+    },
+    {
+      "id": 8,
+      "name": "Carabaffe",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
+      "attack": 63,
+      "defense": 80,
+      "hasEvolution": true,
+      "types": [
+        {
+          "name": "Eau",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png"
+        }
+      ],
+      "description": "Carabaffe est un nageur émérite. Il contrôle efficacement ses oreilles et sa queue pour s'en servir de gouvernail. C'est un pokémon très apprécié des pompiers, car il crache de puissants jets d'eau tout en pouvant se faufiler un peu partout."
+    },
+    {
+      "id": 9,
+      "name": "Tortank",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+      "attack": 83,
+      "defense": 100,
+      "hasEvolution": false,
+      "types": [
+        {
+          "name": "Eau",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png"
+        }
+      ],
+      "description": "Tortank dispose de canons à eau émergeant de sa carapace. Ils sont très précis et peuvent envoyer des balles d'eau capables de faire mouche sur une cible située à plus de 50 m. Il écrase ses adversaires de tout son poids pour leur faire perdre connaissance."
+    },
+    {
+      "id": 10,
+      "name": "Pikachu",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "attack": 55,
+      "defense": 40,
+      "hasEvolution": true,
+      "types": [
+        {
+          "name": "electrik",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/2/2f/Electric.png"
+        }
+      ],
+      "description": "Pikachu est un petit Pokémon joufflu qui ressemble à un rongeur, au corps recouvert d'un pelage jaune avec deux bandes horizontales brunes dans le dos. Il a une petite bouche, de longues oreilles pointues aux extrémités noires et des yeux noir et blanc."
+    },
+    {
+      "id": 11,
+      "name": "Raichu",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
+      "attack": 90,
+      "defense": 55,
+      "hasEvolution": false,
+      "types": [
+        {
+          "name": "electrik",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/2/2f/Electric.png"
+        }
+      ],
+      "description": "Un Raichu est un Pikachu qui a été exposé à une Pierrefoudre. Sa longue queue en balancier lui est vitale, car quand il est trop chargé en électricité, il la plante dans le sol et diffuse son surplus d'électricité. Raichu préfère largement le combat à distance : il n'attaque qu'avec des attaques électriques."
+    },
+    {
+      "id": 12,
+      "name": "Mewtwo",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+      "attack": 110,
+      "defense": 90,
+      "hasEvolution": false,
+      "types": [
+        {
+          "name": "Psy",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/2/21/Psychic.png"
+        }
+      ],
+      "description": "Mewtwo est un terrible Pokémon qui vient d'expériences génétiques horribles et malsaines. Créé pour le combat, il ne connaît ni la pitié, ni la défaite. Ses puissants pouvoirs psychiques peuvent aller jusqu'à déclencher des variations météorologiques partout dans le monde. Il est unique."
+    },
+    {
+      "name": "asd",
+      "attack": 4,
+      "defense": 3,
+      "types": "",
+      "image": "",
+      "hasEvolution": true,
+      "description": "asdasd",
+      "id": 13
+    },
+    {
+      "name": "asdasd",
+      "attack": 100000,
+      "defense": 0,
+      "types": "",
+      "image": "",
+      "hasEvolution": false,
+      "description": "asdsad",
+      "id": 14
+    },
+    {
+      "name": "ssad",
+      "attack": 1,
+      "defense": 1,
+      "types": "",
+      "image": "",
+      "hasEvolution": false,
+      "description": "asdasd",
+      "id": 15
+    },
+    {
+      "name": "aasdasd",
+      "attack": 10,
+      "defense": 10,
+      "types": "",
+      "image": "",
+      "hasEvolution": true,
+      "description": "sadasd",
+      "id": 16
+    },
+    {
+      "name": "nizard",
+      "attack": 2,
+      "defense": 3,
+      "types": "",
+      "image": "",
+      "hasEvolution": false,
+      "description": "asdsd",
+      "id": 17
+    }
+  ]
+}

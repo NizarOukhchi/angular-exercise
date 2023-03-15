@@ -12,5 +12,6 @@ export interface Pokemon {
   image: string;
   hasEvolution: boolean;
   lastSeen: string;
-  captured: boolean;
+  description?: string;
+  captured?: boolean;
 }
