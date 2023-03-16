@@ -195,56 +195,6 @@
         }
       ],
       "description": "Mewtwo est un terrible Pokémon qui vient d'expériences génétiques horribles et malsaines. Créé pour le combat, il ne connaît ni la pitié, ni la défaite. Ses puissants pouvoirs psychiques peuvent aller jusqu'à déclencher des variations météorologiques partout dans le monde. Il est unique."
-    },
-    {
-      "name": "asd",
-      "attack": 4,
-      "defense": 3,
-      "types": "",
-      "image": "",
-      "hasEvolution": true,
-      "description": "asdasd",
-      "id": 13
-    },
-    {
-      "name": "asdasd",
-      "attack": 100000,
-      "defense": 0,
-      "types": "",
-      "image": "",
-      "hasEvolution": false,
-      "description": "asdsad",
-      "id": 14
-    },
-    {
-      "name": "ssad",
-      "attack": 1,
-      "defense": 1,
-      "types": "",
-      "image": "",
-      "hasEvolution": false,
-      "description": "asdasd",
-      "id": 15
-    },
-    {
-      "name": "aasdasd",
-      "attack": 10,
-      "defense": 10,
-      "types": "",
-      "image": "",
-      "hasEvolution": true,
-      "description": "sadasd",
-      "id": 16
-    },
-    {
-      "name": "nizard",
-      "attack": 2,
-      "defense": 3,
-      "types": "",
-      "image": "",
-      "hasEvolution": false,
-      "description": "asdsd",
-      "id": 17
     }
   ]
 }

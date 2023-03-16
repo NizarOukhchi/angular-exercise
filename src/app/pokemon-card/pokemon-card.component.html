@@ -3,6 +3,7 @@
     <h3 class="text-sm text-gray-900 mt-2">
         <app-editable-element [value]="pokemon?.name" (valueChange)="onNameChange($event)"></app-editable-element>
     </h3>
+    <a class="text-gray-400 underline" [routerLink]="['details', pokemon?.id]">See details</a>
     <p class="text-sm text-gray-500 mt-2">{{pokemon?.lastSeen | date: 'shortDate'}}</p>
     <div class="flex gap-6 mx-auto">
         <div class="text-green-900">Attack: 

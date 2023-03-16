@@ -1,0 +1,5 @@
+<div *ngIf="pokemon" class="relative flex flex-col items-center justify-center gap-6 rounded-lg bg-white shadow">
+    <img class="h-40 w-40 rounded-full" [src]="pokemon.image" [alt]="pokemon.name">
+    <h3 class="text-sm font-medium text-center text-gray-900">{{pokemon.name}}</h3>
+    <p class="text-sm font-medium text-center text-gray-900">{{pokemon.description}}</p>
+</div>
